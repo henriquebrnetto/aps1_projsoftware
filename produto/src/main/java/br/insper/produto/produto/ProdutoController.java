@@ -23,6 +23,6 @@ public class ProdutoController {
     @PostMapping
     public Produto postProduto(@RequestBody Produto produto) { return produtoService.createProduto(produto); }
 
-    @PutMapping("/{idProduto")
+    @PutMapping("/{idProduto}")
     public Produto reduceProduto(@PathVariable String idProduto, @RequestBody Integer qtd) { return produtoService.reduceProduto(idProduto, qtd); }
 }

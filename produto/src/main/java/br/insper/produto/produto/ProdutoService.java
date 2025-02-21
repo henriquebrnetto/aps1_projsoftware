@@ -16,7 +16,7 @@ public class ProdutoService {
     public Produto createProduto(Produto produto) {
         Produto produto1 = produtoRepository.findByNome(produto.getNome());
 
-        if (produto1 == null) {
+        if (produto1 != null) {
             throw new ResponseStatusException(HttpStatus.CONFLICT);
         }
         else {
